@@ -3,7 +3,7 @@ nav {
   display: grid;
   border: 2px dashed rgba(114, 186, 94, 0.35);
   justify-items: center;
-  grid-template-columns: 5fr repeat(4,90px) 5fr ;
+  grid-template-columns: 5fr 90px 90px 90px 90px 5fr ;
   grid-template-rows: auto;
   background: rgba(114, 186, 94, 0.05);
 }

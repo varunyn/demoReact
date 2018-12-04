@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/rtivital/react-pages-boilerplate/issues"
   },
-  "homepage": "https://github.com/rtivital/react-pages-boilerplate#readme",
+  "homepage": "https://varunyn.github.io/demoReact",
   "dependencies": {
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-centered": "^3.4.10",
