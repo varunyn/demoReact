@@ -5,7 +5,6 @@ import { Carousel } from 'react-responsive-carousel';
 
 const PREFIX_URL = 'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
 
-
 const images = [
   {
     thumbnail: `${PREFIX_URL}4v.jpg`,
@@ -27,8 +26,6 @@ export default function HomePage() {
   return (
     <div>
       <Header></Header>
-      {/* <Images></Images> */}
-      
       <Carousel showThumbs= {false} showIndicators ={false} swipeable={true}>
                 <div>
                     <img src="https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/4v.jpg" />
