@@ -36,36 +36,7 @@ const stylesLoaders = [
 ];
 
 const rules = [
-  {
-    test: /\.(gif|png|jpe?g|svg)$/i,
-    use: [
-      'file-loader',
-      {
-        loader: 'image-webpack-loader',
-        options: {
-          mozjpeg: {
-            progressive: true,
-            quality: 65
-          },
-          // optipng.enabled: false will disable optipng
-          optipng: {
-            enabled: false,
-          },
-          pngquant: {
-            quality: '65-90',
-            speed: 4
-          },
-          gifsicle: {
-            interlaced: false,
-          },
-          // the webp option will enable WEBP
-          webp: {
-            quality: 75
-          }
-        }
-      },
-    ],
-  },
+  
   {
     test: /\.(js|jsx)$/,
     loader: 'babel-loader',
@@ -97,6 +68,18 @@ const rules = [
     test: /\.(svg|png|jpg|gif|woff|woff2|otf|ttf|eot)$/,
     loader: 'file-loader',
   },
+  {
+    type: 'javascript/auto',
+    test: /\.json$/,
+    use: [
+        {
+          loader: 'file-loader',
+          options: {
+              name: "./plugin-config/[name].[ext]"
+          }
+        }
+    ]
+}
 ];
 
 const pluginsBase = [
@@ -156,6 +139,7 @@ module.exports = {
     path: SETTINGS.PUBLIC_PATH,
     filename: 'bundle.js',
     publicPath: pagesBuild ? `/${getRepositoryName()}/` : '/',
+    // publicPath: '.src/assets'
   },
 
   resolve: {

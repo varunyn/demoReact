@@ -35,11 +35,15 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'postcss-loader'],
         exclude: path.resolve(__dirname, '../src'),
       },
-
       {
         test: /\.(svg|png|jpg|gif|woff|woff2|otf|ttf|eot)$/,
         loader: 'file-loader',
       },
+        
+       {
+        test: /\.json$/,
+        loader: 'raw-loader',
+      }
     ],
   },
 
